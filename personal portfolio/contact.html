@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="nav-menu">
+     <a href="index.html" class="nav-link">
+      <img src="assets/home.svg" alt="Home Icon" class="nav-icon" />
+      Home
+    </a>
+    <a href="about.html" class="nav-link">
+      <img src="assets/about.svg" alt="About Icon" class="nav-icon" />
+      About
+    </a>
+    <a href="skills.html" class="nav-link">
+      <img src="assets/skills.svg" alt="Home Icon" class="nav-icon" />
+      skills
+    </a>
+    <a href="projects.html" class="nav-link">
+      <img src="assets/projects.svg" alt="Home Icon" class="nav-icon" />
+      projects
+    </a>
+    <a href="certificates.html" class="nav-link">
+      <img src="assets/certificate.svg" alt="Home Icon" class="nav-icon" />
+      certificates
+    </a>
+    <a href="contact.html" class="nav-link">
+      <img src="assets/contacts.svg" alt="Home Icon" class="nav-icon" />
+      contact
+    </a>
+
+  <section class="contact-section">
+    <div class="contact-icons">
+      <a href="https://www.linkedin.com/in/sarvothyan-s-a61786291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+        <img src="assets/linkedin.svg" alt="linkedin"></a>
+      <a href="https://github.com/SarvothyanS0?tab=repositories">
+        <img src="assets//github.svg" alt="GitHub"></a>
+    <a href="mailto:sarvothyans@gmail.com">
+        <img src="assets//mail.svg" alt="Email"></a>
+      <a href="https://www.instagram.com/mr_tragic_boie?igsh=MXUzajU3OW85OXBycg==">
+        <img src="assets//instagram.svg" alt="Instagram"></a>
+    </div>
+  </section>
+  <section class="contact-section">
+    <h1>Contact Me</h1>
+
+    <div class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
+
+      <button onclick="handleSubmit()">Send</button>
+    </div>
+
+    <div id="thank-you" style="display:none; margin-top: 20px; text-align: center;">
+      <h2 id="thanks-text"></h2>
+      <p>
+        <a href="assets/resume/Sarvothyan Resume.pdf" target="_blank" style="color: #00ffff; text-decoration: underline;">Click here to download my resume</a>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    function handleSubmit() {
+      const name = document.getElementById("name").value.trim();
+
+      if (!name) {
+        alert("Please enter your name.");
+        return;
+      }
+
+      document.querySelector(".contact-form").style.display = "none";
+      document.getElementById("thanks-text").innerText = `Thank you, ${name}, for sending your message!`;
+      document.getElementById("thank-you").style.display = "block";
+    }
+  </script>
+  <footer class="site-footer">
+  <p>&copy; 2025 Sarvothyan S. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
